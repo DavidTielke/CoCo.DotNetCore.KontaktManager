@@ -1,0 +1,30 @@
+﻿{
+  "version": "1.0.0-*",
+  "description": "Mappings Class Library",
+  "authors": [ "David" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "frameworks": {
+    "dnxcore50": {
+      "dependencies": {
+        "Microsoft.CSharp": "4.0.1-beta-23516",
+        "System.Collections": "4.0.11-beta-23516",
+        "System.Linq": "4.0.1-beta-23516",
+        "System.Runtime": "4.0.21-beta-23516",
+        "System.Threading": "4.0.11-beta-23516",
+        "PersonManagement": "1.0.0-*",
+        "PersonManagement.Contracts": "1.0.0-*",
+        "DataStoring.Contracts": "1.0.0-*",
+        "DataStoring.EF": "1.0.0-*",
+        "Security": "1.0.0-*",
+        "Security.Contracts": "1.0.0-*",
+        "Configuration": "1.0.0-*",
+        "Configuration.Contracts": "1.0.0-*",
+        "UserManagement": "1.0.0-*",
+        "UserManagement.Contracts": "1.0.0-*"
+      }
+    }
+  }
+}

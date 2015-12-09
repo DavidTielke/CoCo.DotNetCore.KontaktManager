@@ -1,0 +1,59 @@
+﻿@model WebClient.Models.Home.HomeIndexModel
+@{
+    ViewBag.Title = "Übersicht";
+}
+
+<script src="~/js/controller/homecontroller.js"></script>
+<div class="row" ng-controller="homecontroller">
+    <div class="col-md-6">
+        <h1>
+            <span class="label label-default" ng-bind="amountAdults"></span> 
+            Erwachsene
+            <a ng-click="refreshAdults()" class="btn btn-success"><span class="glyphicon glyphicon-refresh"></span></a>
+        </h1>
+        <table class="table table-bordered table-condensed table-striped table-hover">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Vorname</th>
+                <th>Nachname</th>
+                <th>Alter</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="adult in adults" ng-click="Selected(adult)">
+                    <td>{{adult.ID}}</td>
+                    <td>{{adult.Firstname}}</td>
+                    <td>{{adult.Lastname}}</td>
+                    <td>{{adult.Age}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-md-6">
+        <h1>
+            <span class="label label-default" ng-bind="amountChildren"></span>
+            Kinder
+            <a ng-click="refreshChildren()" class="btn btn-success"><span class="glyphicon glyphicon-refresh"></span></a>
+        </h1>
+        <table class="table table-bordered table-condensed table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Vorname</th>
+                    <th>Nachname</th>
+                    <th>Alter</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="child in children">
+                    <td>{{child.ID}}</td>
+                    <td>{{child.Firstname}}</td>
+                    <td>{{child.Lastname}}</td>
+                    <td>{{child.Age}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
